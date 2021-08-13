@@ -1,0 +1,6 @@
+.video-grid {
+  display: grid;
+  /* TODO: should use rem for column size? */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem;
+}
