@@ -1,14 +1,14 @@
 import VideoThumbnail from './VideoThumbnail';
 import './VideoGrid.css';
 
-const VideoGrid = ({ videos }) => {
+function VideoGrid({ videos }) {
   return (
     <div className="video-grid">
-      {videos.map((video) => (
-        <VideoThumbnail video={video} />
+      {videos.map((video, idx) => (
+        <VideoThumbnail key={idx} video={video} />
       ))}
     </div>
   );
-};
+}
 
 export default VideoGrid;

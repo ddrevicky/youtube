@@ -1,21 +1,20 @@
-import VideoGrid from './components/VideoGrid';
+import { Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import Trending from './pages/Trending';
+import Library from './pages/Library';
+import Subscriptions from './pages/Subscriptions';
 import './reset.css';
 
-const videos = [
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-  { title: 'Rick and Morty', channel: 'Swimpedia', views: 122 },
-];
-
 function App() {
-  return <VideoGrid videos={videos} />;
+  return (
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/feed/trending" component={Trending} />
+      <Route exact path="/feed/library" component={Library} />
+      <Route exact path="/feed/subscriptions" component={Subscriptions} />
+      {/* TODO: Add routes */}
+    </Switch>
+  );
 }
 
 export default App;
