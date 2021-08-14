@@ -4,16 +4,21 @@ import Trending from './pages/Trending';
 import Library from './pages/Library';
 import Subscriptions from './pages/Subscriptions';
 import './reset.css';
+import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/feed/trending" component={Trending} />
-      <Route exact path="/feed/library" component={Library} />
-      <Route exact path="/feed/subscriptions" component={Subscriptions} />
-      {/* TODO: Add routes */}
-    </Switch>
+    <>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/feed/trending" component={Trending} />
+        <Route exact path="/feed/library" component={Library} />
+        <Route exact path="/feed/subscriptions" component={Subscriptions} />
+        {/* TODO: Add routes */}
+      </Switch>
+    </>
   );
 }
 
