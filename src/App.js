@@ -5,20 +5,23 @@ import Library from './pages/Library';
 import Subscriptions from './pages/Subscriptions';
 import './reset.css';
 import './App.css';
-import Navbar from './components/Navbar';
+import AppLayout from './components/AppLayout';
+import SearchResults from './pages/SearchResults';
+import { routes } from './utils';
+import Explore from './pages/Explore';
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <AppLayout>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/feed/trending" component={Trending} />
-        <Route exact path="/feed/library" component={Library} />
-        <Route exact path="/feed/subscriptions" component={Subscriptions} />
-        {/* TODO: Add routes */}
+        <Route exact path={routes.home} component={Home} />
+        <Route exact path={routes.explore} component={Explore} />
+        <Route exact path={routes.subscriptions} component={Subscriptions} />
+        <Route exact path={routes.library} component={Library} />
+        <Route exact path={routes.trending} component={Trending} />
+        <Route path="/results/:searchQuery" component={SearchResults} />
       </Switch>
-    </>
+    </AppLayout>
   );
 }
 

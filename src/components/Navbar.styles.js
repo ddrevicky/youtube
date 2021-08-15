@@ -15,7 +15,7 @@ import styled from '@emotion/styled';
 //     },
 //   }));
 
-const NavbarContainer = styled.div(({ theme }) => ({
+const NavbarContainer = styled.header(({ theme }) => ({
   backgroundColor: theme.colors.menuBackground,
   display: 'flex',
   alignItems: 'center',
