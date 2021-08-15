@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react';
 import { AddVideoIcon, AppLogo, AppsIcon, MenuIcon, NotificationsIcon, SearchIcon } from './Icons';
-import './Navbar.css';
 import {
   NavbarCenter,
   NavbarContainer,
@@ -17,13 +16,14 @@ function Navbar() {
     <NavbarContainer>
       <NavbarStart>
         <MenuIcon />
-        <AppLogo />
+        <AppLogo className="logo" />
       </NavbarStart>
       <NavbarCenter>
         <SearchInput type="text" placeholder="Search" />
         <SearchButton>
           <SearchIcon color={theme.colors.tertiary} size={theme.iconSizes.small} />
         </SearchButton>
+        {/* TODO: Want this? */}
         {/* <MicrophoneButton>
           <MicrophoneIcon />
         </MicrophoneButton> */}

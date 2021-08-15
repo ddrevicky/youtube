@@ -1,13 +1,13 @@
 import VideoThumbnail from './VideoThumbnail';
-import './VideoGrid.css';
+import { VideoGridContainer } from './VideoGrid.styles';
 
 function VideoGrid({ videos }) {
   return (
-    <div className="video-grid">
+    <VideoGridContainer>
       {videos.map((video, idx) => (
         <VideoThumbnail key={idx} video={video} />
       ))}
-    </div>
+    </VideoGridContainer>
   );
 }
 

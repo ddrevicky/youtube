@@ -1,7 +1,0 @@
-.video-grid {
-  display: grid;
-  background-color: #181818;
-  /* TODO: should use rem for column size? */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1rem;
-}

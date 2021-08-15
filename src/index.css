@@ -17,3 +17,7 @@ code {
   display: flex;
   align-items: center;
 }
+
+.logo {
+  margin: 0 1.5rem;
+}

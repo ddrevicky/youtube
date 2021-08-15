@@ -5,7 +5,10 @@ function VideoThumbnail({ video }) {
     <div className="thumbnail">
       <img className="video-preview" src={video.url} />
       <div className="thumbnail__bottom">
-        <img className="thumbnail__channel-avatar" src="http://unsplash.it/36/36?gravity=center" />
+        <img
+          className="thumbnail__channel-avatar"
+          src="http://unsplash.it/36/36?gravity=center?page=1"
+        />
         <div className="thumbnail__info">
           <div className="thumbnail__video-title">{video.title}</div>
           <div className="thumbnail__channel-name-meta">
