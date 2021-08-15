@@ -1,30 +1,42 @@
-import {
-  AddVideoIcon,
-  AppLogo,
-  AppsIcon,
-  MenuIcon,
-  MicrophoneIcon,
-  NotificationsIcon,
-} from './Icons';
+import { useTheme } from '@emotion/react';
+import { AddVideoIcon, AppLogo, AppsIcon, MenuIcon, NotificationsIcon, SearchIcon } from './Icons';
 import './Navbar.css';
+import {
+  NavbarCenter,
+  NavbarContainer,
+  NavbarEnd,
+  NavbarStart,
+  SearchButton,
+  SearchInput,
+  UserAvatar,
+} from './Navbar.styles';
 
 function Navbar() {
+  const theme = useTheme();
   return (
-    <div className="navbar">
-      <div className="navbar-start">
+    <NavbarContainer>
+      <NavbarStart>
         <MenuIcon />
         <AppLogo />
-      </div>
-      <div className="navbar-center">
-        <MicrophoneIcon />
-      </div>
-      <div className="navbar-end">
+      </NavbarStart>
+      <NavbarCenter>
+        <SearchInput type="text" placeholder="Search" />
+        <SearchButton>
+          <SearchIcon color={theme.colors.tertiary} size={theme.iconSizes.small} />
+        </SearchButton>
+        {/* <MicrophoneButton>
+          <MicrophoneIcon />
+        </MicrophoneButton> */}
+      </NavbarCenter>
+      <NavbarEnd>
         <AddVideoIcon />
         <AppsIcon />
         <NotificationsIcon />
-        <img className="user-avatar" src="http://unsplash.it/32/32?gravity=center" />
-      </div>
-    </div>
+        <UserAvatar>
+          <img src="http://unsplash.it/32/32?gravity=center" />
+        </UserAvatar>
+      </NavbarEnd>
+    </NavbarContainer>
   );
 }
 
