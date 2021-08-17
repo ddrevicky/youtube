@@ -1,16 +1,18 @@
-import { AppContainer, BodyContainer, ContentContainer } from './AppLayout.styles';
+import { Wrapper } from './AppLayout.styles';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 
 function AppLayout({ children }) {
   return (
-    <AppContainer>
-      <Navbar />
-      <BodyContainer>
-        <Sidebar />
-        <ContentContainer>{children}</ContentContainer>
-      </BodyContainer>
-    </AppContainer>
+    <Wrapper>
+      <div className="app">
+        <Navbar />
+        <div className="body">
+          <Sidebar />
+          <div className="content">{children}</div>
+        </div>
+      </div>
+    </Wrapper>
   );
 }
 

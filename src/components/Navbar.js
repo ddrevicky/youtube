@@ -1,4 +1,6 @@
 import { useTheme } from '@emotion/react';
+import { Link } from 'react-router-dom';
+import { routes } from '../utils';
 import { AddVideoIcon, AppLogo, AppsIcon, MenuIcon, NotificationsIcon, SearchIcon } from './Icons';
 import {
   NavbarCenter,
@@ -16,7 +18,9 @@ function Navbar() {
     <NavbarContainer>
       <NavbarStart>
         <MenuIcon />
-        <AppLogo className="logo" />
+        <Link to={routes.home}>
+          <AppLogo className="logo" />
+        </Link>
       </NavbarStart>
       <NavbarCenter>
         <SearchInput type="text" placeholder="Search" />

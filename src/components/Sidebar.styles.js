@@ -4,7 +4,6 @@ const SidebarContainer = styled.div(({ theme }) => ({
   backgroundColor: theme.colors.menuBackground,
   display: 'flex',
   flexDirection: 'column',
-  height: '800px',
   width: '240px',
 }));
 

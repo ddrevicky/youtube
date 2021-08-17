@@ -1,5 +1,5 @@
-function Trending() {
-  return <div>Trending</div>;
+function Subscriptions() {
+  return <div>Subscriptions</div>;
 }
 
-export default Trending;
+export default Subscriptions;

@@ -25,9 +25,14 @@ const iconSizes = {
   medium: 24,
 };
 
+const paddings = {
+  section: '20px',
+};
+
 export const darkTheme = {
   colors,
   fontWeights,
   iconSizes,
+  paddings,
   font: "'Roboto', Arial, sans-serif",
 };

@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import { routes } from '../utils';
-import { ExploreIcon } from './Icons';
+import { ExploreIcon, HomeIcon, SubscriptionsIcon, VideoLibraryIcon } from './Icons';
 import { MenuItemContainer, SidebarContainer } from './Sidebar.styles';
 
 function MenuItem({ title, icon }) {
   return (
     <MenuItemContainer>
-      <ExploreIcon />
       {icon}
       {title}
     </MenuItemContainer>
@@ -14,22 +13,18 @@ function MenuItem({ title, icon }) {
 }
 
 const sidebarMenuItems = [
-  { title: 'Home', path: routes.home },
+  { title: 'Home', path: routes.home, icon: <HomeIcon /> },
   { title: 'Explore', path: routes.explore, icon: <ExploreIcon /> },
-  { title: 'Subscriptions', path: routes.subscriptions },
-  { title: 'Library', path: routes.library },
-  { title: 'Trending', path: routes.trending },
-  // { title: 'Your videos' },
-  // { title: 'Watch later' },
-  // { title: 'Your clips' },
+  { title: 'Subscriptions', path: routes.subscriptions, icon: <SubscriptionsIcon /> },
+  { title: 'Library', path: routes.library, icon: <VideoLibraryIcon /> },
 ];
 
 function Sidebar() {
   return (
     <SidebarContainer>
-      {sidebarMenuItems.map(({ title, path }) => (
+      {sidebarMenuItems.map(({ title, path, icon }) => (
         <Link to={path}>
-          <MenuItem title={title} />
+          <MenuItem title={title} icon={icon} />
         </Link>
       ))}
     </SidebarContainer>

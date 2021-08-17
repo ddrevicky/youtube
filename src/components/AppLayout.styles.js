@@ -1,19 +1,22 @@
 import styled from '@emotion/styled';
 
-const AppContainer = styled.div(({ theme }) => ({
-  backgroundColor: theme.colors.menuBackground,
-  display: 'flex',
-  flexDirection: 'column',
-}));
+const Wrapper = styled.div`
+  .app {
+    background: ${(props) => props.theme.colors.menuBackground};
+  }
 
-const BodyContainer = styled.body(({ theme }) => ({
-  backgroundColor: theme.colors.menuBackground,
-  display: 'flex',
-}));
+  .body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
 
-const ContentContainer = styled.body(({ theme }) => ({
-  display: 'flex',
-  flexGrow: 1,
-}));
+  .content {
+    background: ${(props) => props.theme.colors.bodyBackground};
+    width: 100%;
+    padding-top: ${(props) => props.theme.paddings.section};
+    padding-left: ${(props) => props.theme.paddings.section};
+  }
+`;
 
-export { AppContainer, BodyContainer, ContentContainer };
+export { Wrapper };
