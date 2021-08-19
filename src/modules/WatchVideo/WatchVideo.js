@@ -1,7 +1,7 @@
-import VideoPlayer from '../components/VideoPlayer';
 import { Wrapper } from './WatchVideo.styles';
-import { mockVideos } from '../utils';
-import VideoThumbnail from '../components/VideoThumbnail';
+import { mockVideos } from '../../utils';
+import VideoPlayer from '../common/components/VideoPlayer';
+import VideoThumbnail from '../Home/components/VideoThumbnail';
 
 function WatchVideo() {
   const suggestedVideos = mockVideos.slice(0, 6);

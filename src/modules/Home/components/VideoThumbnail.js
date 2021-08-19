@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { VideoInfo } from './VideoInfo';
-import VideoPreview from './VideoPreview';
+import VideoInfo from '../../common/components/VideoInfo';
+import VideoPreview from '../../common/components/VideoPreview';
 import { Wrapper } from './VideoThumbnail.styles';
 
 function VideoThumbnail({ video }) {

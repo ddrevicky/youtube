@@ -1,15 +1,15 @@
 import { Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
-import Library from './pages/Library';
-import Subscriptions from './pages/Subscriptions';
-import './reset.css';
 import './App.css';
-import AppLayout from './components/AppLayout';
-import SearchResults from './pages/SearchResults';
+import Channel from './modules/Channel/Channel';
+import AppLayout from './modules/common/components/AppLayout';
+import Explore from './modules/Explore/Explore';
+import Home from './modules/Home/Home';
+import Library from './modules/Library/Library';
+import SearchResults from './modules/SearchResults/SearchResults';
+import Subscriptions from './modules/Subscriptions/Subscriptions';
+import WatchVideo from './modules/WatchVideo/WatchVideo';
+import './reset.css';
 import { routes } from './utils';
-import Explore from './pages/Explore';
-import WatchVideo from './pages/WatchVideo';
-import Channel from './pages/Channel';
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Wrapper } from './VideoInfo.styles';
 
-export function VideoInfo({ video }) {
+function VideoInfo({ video }) {
   const uploadDatetime = video.uploadDatetime.format('MMM D YYYY');
   return (
     <Wrapper>
@@ -20,3 +20,5 @@ export function VideoInfo({ video }) {
     </Wrapper>
   );
 }
+
+export default VideoInfo;

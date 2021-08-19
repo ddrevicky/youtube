@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 import { Link } from 'react-router-dom';
-import { routes } from '../utils';
+import { routes } from '../../../utils';
 import { AddVideoIcon, AppLogo, AppsIcon, MenuIcon, NotificationsIcon, SearchIcon } from './Icons';
 import {
   NavbarCenter,

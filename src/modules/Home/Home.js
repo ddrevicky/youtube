@@ -1,5 +1,5 @@
-import VideoGrid from '../components/VideoGrid';
-import { mockVideos } from '../utils';
+import VideoGrid from './components/VideoGrid';
+import { mockVideos } from '../../utils';
 
 const videos = mockVideos;
 

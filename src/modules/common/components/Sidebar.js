@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { routes } from '../utils';
+import { routes } from '../../../utils';
 import { ExploreIcon, HomeIcon, SubscriptionsIcon, VideoLibraryIcon } from './Icons';
 import { MenuItemContainer, SidebarContainer } from './Sidebar.styles';
 

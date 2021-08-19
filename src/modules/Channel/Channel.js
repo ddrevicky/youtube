@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { mockVideos } from '../utils';
+import { mockVideos } from '../../utils';
 import { Wrapper } from './Channel.styles';
 
 function Channel() {
