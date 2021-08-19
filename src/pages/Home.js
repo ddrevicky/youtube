@@ -1,7 +1,7 @@
 import VideoGrid from '../components/VideoGrid';
-import { dummyVideos } from '../utils';
+import { mockVideos } from '../utils';
 
-const videos = dummyVideos;
+const videos = mockVideos;
 
 function Home() {
   return <VideoGrid videos={videos} />;

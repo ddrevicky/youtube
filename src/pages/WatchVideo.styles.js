@@ -18,8 +18,6 @@ const Wrapper = styled.div`
   .video {
     width: 100%;
     min-width: 270px;
-    /* min-width: 300px; */
-    /* min-height: 100px; */
     background: rgba(255, 255, 0, 0.15);
     border: 1px solid red;
   }
@@ -32,7 +30,7 @@ const Wrapper = styled.div`
   }
 
   .videoPreview {
-    width: 150px;
+    width: 350px;
     height: 50px;
     background: rgba(255, 0, 0, 0.15);
     border: 1px solid red;

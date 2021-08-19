@@ -7,7 +7,7 @@ export const routes = {
   library: '/feed/library',
 };
 
-export const dummyVideos = [
+export const mockVideos = [
   {
     title: 'Best of Mythic Quest',
     channel: { name: 'Sitcom Radio', id: 1234 },
