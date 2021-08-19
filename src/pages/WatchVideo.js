@@ -1,10 +1,14 @@
 import VideoPlayer from '../components/VideoPlayer';
 import { Wrapper } from './WatchVideo.styles';
+import { mockVideos } from '../utils';
+import VideoThumbnail from '../components/VideoThumbnail';
 
 function WatchVideo() {
+  const suggestedVideos = mockVideos.slice(0, 6);
+
   const videoJsOptions = {
     // lookup the options in the docs for more options
-    autoplay: true,
+    autoplay: false,
     controls: true,
     responsive: true,
     fluid: true,
@@ -31,10 +35,10 @@ function WatchVideo() {
           <div>Comments</div>
         </div>
         <div className="suggestedCol">
-          <div className="videoPreview">Video</div>
-          <div className="videoPreview">Video</div>
-          <div className="videoPreview">Video</div>
-          <div className="videoPreview">Video</div>
+          <VideoThumbnail video={suggestedVideos[0]} />
+          <VideoThumbnail video={suggestedVideos[1]} />
+          <VideoThumbnail video={suggestedVideos[2]} />
+          <VideoThumbnail video={suggestedVideos[3]} />
         </div>
       </div>
     </Wrapper>
