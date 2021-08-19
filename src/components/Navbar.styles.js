@@ -1,20 +1,5 @@
 import styled from '@emotion/styled';
 
-// TODO: move css classes to emotion
-// 2. modify navbar center end start
-// Don't worry about theme colors for now
-
-// const DocumentTableContainer = styled.div(({ theme }) => ({
-//     border: `1px solid ${theme.colors.border}`,
-//     marginBottom: theme.baseUnit * 2,
-//     '.headerRow': {
-//       backgroundColor: theme.colors.grayBackground,
-//       padding: `${theme.baseUnit * 1.5}px ${theme.baseUnit * 2}px`,
-//       color: theme.colors.secondary,
-//       alignItems: 'center',
-//     },
-//   }));
-
 const NavbarContainer = styled.header(({ theme }) => ({
   backgroundColor: theme.colors.menuBackground,
   display: 'flex',

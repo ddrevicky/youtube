@@ -1,4 +1,5 @@
 import VideoPlayer from '../components/VideoPlayer';
+import { Wrapper } from './WatchVideo.styles';
 
 function WatchVideo() {
   const videoJsOptions = {
@@ -15,29 +16,28 @@ function WatchVideo() {
     sources: [
       {
         // https://pixabay.com/videos/lake-houses-hill-mountain-boat-67201/
-        src: 'https://vod-progressive.akamaized.net/exp=1629236369~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4341%2F20%2F521707474%2F2437261020.mp4~hmac=0451fbc3726a6a9f38d4e7cd65e068283880f704ddea9df3b5a17e695299a6d9/vimeo-prod-skyfire-std-us/01/4341/20/521707474/2437261020.mp4?filename=Ink+-+67358.mp4',
+        src: 'https://vod-progressive.akamaized.net/exp=1629398593~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4327%2F20%2F521635037%2F2436722604.mp4~hmac=be9f402b2753dce86cde3995f2ac3540215b32ec21839327547737ea0cb1e3c3/vimeo-prod-skyfire-std-us/01/4327/20/521635037/2436722604.mp4?filename=Lake+-+67201.mp4',
         type: 'video/mp4',
       },
     ],
   };
   return (
-    <div style={{ display: 'flex' }}>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <div>Test1</div>
-        <div>Test2</div>
-        <div style={{ width: '50%' }}>
+    <Wrapper>
+      <div className="row">
+        <div className="videoCol">
+          {/* <video className="video">Video</video> */}
           <VideoPlayer options={videoJsOptions} />
+          <div>Video Description</div>
+          <div>Comments</div>
         </div>
-        Watch Video
+        <div className="suggestedCol">
+          <div className="videoPreview">Video</div>
+          <div className="videoPreview">Video</div>
+          <div className="videoPreview">Video</div>
+          <div className="videoPreview">Video</div>
+        </div>
       </div>
-    </div>
+    </Wrapper>
   );
 }
 
