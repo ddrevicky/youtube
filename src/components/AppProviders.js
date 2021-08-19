@@ -4,6 +4,7 @@ import ErrorFallback from './ErrorFallback';
 import { IconContext } from 'react-icons';
 import { ThemeProvider } from '@emotion/react';
 import { darkTheme } from '../styles/theme';
+import { GlobalStyle } from '../styles/GlobalStyle';
 
 function AppProviders({ children }) {
   return (
@@ -13,7 +14,10 @@ function AppProviders({ children }) {
           <IconContext.Provider
             value={{ size: '24px', color: 'white', className: 'global-class-name' }}
           >
-            <Router>{children}</Router>
+            <Router>
+              <GlobalStyle />
+              {children}
+            </Router>
           </IconContext.Provider>
         </ThemeProvider>
       </ErrorBoundary>
