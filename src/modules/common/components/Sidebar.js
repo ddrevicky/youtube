@@ -23,7 +23,7 @@ function Sidebar() {
   return (
     <SidebarContainer>
       {sidebarMenuItems.map(({ title, path, icon }) => (
-        <Link to={path}>
+        <Link key={title} to={path}>
           <MenuItem title={title} icon={icon} />
         </Link>
       ))}

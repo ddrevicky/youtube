@@ -57,12 +57,6 @@ const NavbarEnd = styled.div(({ theme }) => ({
   gap: '1.7rem',
 }));
 
-const UserAvatar = styled.div(() => ({
-  width: '36px',
-  height: '36px',
-  borderRadius: '50%',
-}));
-
 export {
   NavbarStart,
   NavbarCenter,

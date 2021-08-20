@@ -1,6 +1,7 @@
 import { useTheme } from '@emotion/react';
 import { Link } from 'react-router-dom';
 import { routes } from '../../../utils';
+import Avatar from './Avatar';
 import { AddVideoIcon, AppLogo, AppsIcon, MenuIcon, NotificationsIcon, SearchIcon } from './Icons';
 import {
   NavbarCenter,
@@ -36,9 +37,7 @@ function Navbar() {
         <AddVideoIcon />
         <AppsIcon />
         <NotificationsIcon />
-        <UserAvatar>
-          <img src="http://unsplash.it/32/32?gravity=center" />
-        </UserAvatar>
+        <Avatar size="36px" />
       </NavbarEnd>
     </NavbarContainer>
   );

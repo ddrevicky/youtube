@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Avatar from '../../common/components/Avatar';
 import VideoInfo from '../../common/components/VideoInfo';
 import VideoPreview from '../../common/components/VideoPreview';
 import { Wrapper } from './VideoThumbnail.styles';
@@ -10,7 +11,9 @@ function VideoThumbnail({ video }) {
         <div className="thumbnail">
           <VideoPreview video={video} />
           <div className="bottomSection">
-            <img className="channelAvatar" src="http://unsplash.it/36/36?gravity=center?page=1" />
+            <Link to={`/channel/${video.channel.id}`}>
+              <Avatar size="36px" />
+            </Link>
             <VideoInfo video={video} />
           </div>
         </div>

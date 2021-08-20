@@ -36,16 +36,6 @@ const Wrapper = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
-  .meta {
-    display: flex;
-  }
-
-  .views::after {
-    content: '•';
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-  }
 `;
 
 export { Wrapper };

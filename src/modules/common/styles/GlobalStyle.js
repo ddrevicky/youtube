@@ -8,6 +8,10 @@ export const GlobalStyle = () => {
           text-decoration: none;
           color: inherit;
         }
+
+        .flex-row {
+          display: flex;
+        }
       `}
     />
   );
