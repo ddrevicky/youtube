@@ -1,11 +1,14 @@
+import { ThemeContext } from '@emotion/react';
 import styled from '@emotion/styled';
 
 const NavbarContainer = styled.header(({ theme }) => ({
   backgroundColor: theme.colors.menuBackground,
+  position: 'fixed',
+  width: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  height: '56px',
+  height: theme.components.navbar.height,
   padding: '0 16px',
 }));
 

@@ -29,10 +29,16 @@ const paddings = {
   section: '20px',
 };
 
+const components = {
+  navbar: { height: '56px' },
+  sidebarLarge: { width: '240px' },
+};
+
 export const darkTheme = {
   colors,
   fontWeights,
   iconSizes,
   paddings,
+  components,
   font: "'Roboto', Arial, sans-serif",
 };
