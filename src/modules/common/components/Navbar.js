@@ -10,7 +10,6 @@ import {
   NavbarStart,
   SearchButton,
   SearchInput,
-  UserAvatar,
 } from './Navbar.styles';
 
 function Navbar() {
@@ -18,7 +17,7 @@ function Navbar() {
   return (
     <NavbarContainer>
       <NavbarStart>
-        <MenuIcon />
+        <MenuIcon className="nav-icon" />
         <Link to={routes.home}>
           <AppLogo className="logo" />
         </Link>
@@ -34,9 +33,9 @@ function Navbar() {
         </MicrophoneButton> */}
       </NavbarCenter>
       <NavbarEnd>
-        <AddVideoIcon />
-        <AppsIcon />
-        <NotificationsIcon />
+        <AddVideoIcon className="nav-icon" />
+        <AppsIcon className="nav-icon" />
+        <NotificationsIcon className="nav-icon" />
         <Avatar size="36px" />
       </NavbarEnd>
     </NavbarContainer>

@@ -1,30 +1,34 @@
-import { ThemeContext } from '@emotion/react';
 import styled from '@emotion/styled';
 
-const NavbarContainer = styled.header(({ theme }) => ({
-  backgroundColor: theme.colors.menuBackground,
-  position: 'fixed',
-  width: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  height: theme.components.navbar.height,
-  padding: '0 16px',
-}));
+const NavbarContainer = styled.header`
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: ${(props) => props.theme.components.navbar.height};
+  padding: '0 16px';
 
-const NavbarStart = styled.div(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-}));
+  .nav-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+`;
 
-const NavbarCenter = styled.form(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  width: '100%',
-  maxWidth: '640px',
-  marginLeft: '40px',
-  border: `1px solid #323232`,
-}));
+const NavbarStart = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+`;
+
+const NavbarCenter = styled.form`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 640px;
+  margin-left: 40px;
+  border: 1px solid #323232;
+`;
 
 const SearchInput = styled.input(({ theme }) => ({
   backgroundColor: theme.colors.blackish,
@@ -54,11 +58,11 @@ const MicrophoneButton = styled.button`
   border-radius: 50%;
 `;
 
-const NavbarEnd = styled.div(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '1.7rem',
-}));
+const NavbarEnd = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+`;
 
 export {
   NavbarStart,

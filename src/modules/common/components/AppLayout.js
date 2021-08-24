@@ -5,12 +5,10 @@ import Sidebar from './Sidebar';
 function AppLayout({ children }) {
   return (
     <Wrapper>
-      <div className="app">
-        <Navbar />
-        <div className="body">
-          <Sidebar />
-          <div className="content">{children}</div>
-        </div>
+      <Navbar />
+      <div className="body">
+        <Sidebar />
+        <div className="content">{children}</div>
       </div>
     </Wrapper>
   );

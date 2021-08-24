@@ -2,8 +2,10 @@ const colors = {
   menuBackground: '#202020',
   bodyBackground: '#181818',
   primary: '#FFF',
-  secondary: '#AAAAAA',
+  // secondary: '#AAAAAA',
+  secondary: '#909090', // TODO: actually use this in components
   tertiary: '#6f6f6f',
+  quaternary: '#383838', // divider, highlight
   blackish: '#121212',
   grey: '#202020',
   darkGrey: '#383838',

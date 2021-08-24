@@ -8,20 +8,16 @@ import { GlobalStyle } from '../styles/GlobalStyle';
 
 function AppProviders({ children }) {
   return (
-    <div>
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <ThemeProvider theme={darkTheme}>
-          <IconContext.Provider
-            value={{ size: '24px', color: 'white', className: 'global-class-name' }}
-          >
-            <Router>
-              <GlobalStyle />
-              {children}
-            </Router>
-          </IconContext.Provider>
-        </ThemeProvider>
-      </ErrorBoundary>
-    </div>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <ThemeProvider theme={darkTheme}>
+        <IconContext.Provider value={{ className: 'global-class-name' }}>
+          <Router>
+            <GlobalStyle />
+            {children}
+          </Router>
+        </IconContext.Provider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 
