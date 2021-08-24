@@ -5,6 +5,7 @@ import AppLayout from './modules/common/components/AppLayout';
 import Explore from './modules/Explore/Explore';
 import Home from './modules/Home/Home';
 import Library from './modules/Library/Library';
+import PlayList from './modules/PlayList/PlayList';
 import SearchResults from './modules/SearchResults/SearchResults';
 import Subscriptions from './modules/Subscriptions/Subscriptions';
 import WatchVideo from './modules/WatchVideo/WatchVideo';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/results/:searchQuery" component={SearchResults} />
         <Route path="/watch/:videoId" component={WatchVideo} />
         <Route path="/channel/:channelId" component={Channel} />
+        <Route path="/playlist/:playListId" component={PlayList} />
       </Switch>
     </AppLayout>
   );

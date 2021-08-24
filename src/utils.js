@@ -5,6 +5,8 @@ export const routes = {
   explore: '/feed/explore',
   subscriptions: '/feed/subscriptions',
   library: '/feed/library',
+  playlist: '/playlist',
+  
 };
 
 export const mockVideos = [

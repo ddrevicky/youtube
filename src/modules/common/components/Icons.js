@@ -10,6 +10,8 @@ import {
   MdSubscriptions,
   MdVideoLibrary,
   MdHistory,
+  MdWatchLater,
+  MdThumbUp,
 } from 'react-icons/md';
 import { ReactComponent as YoutubeSvg } from '../../../assets/yt_logo_rgb_dark.svg';
 
@@ -25,5 +27,7 @@ export const ExploreIcon = (props) => <MdExplore {...props} />;
 export const SubscriptionsIcon = (props) => <MdSubscriptions {...props} />;
 export const VideoLibraryIcon = (props) => <MdVideoLibrary {...props} />;
 export const HistoryIcon = (props) => <MdHistory {...props} />;
+export const WatchLaterIcon = (props) => <MdWatchLater {...props} />;
+export const ThumbUpIcon = (props) => <MdThumbUp {...props} />;
 
 export const AppLogo = () => <YoutubeSvg className="logo" width="90px" height="20px" />;

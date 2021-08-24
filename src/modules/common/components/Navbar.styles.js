@@ -65,5 +65,4 @@ export {
   SearchInput,
   SearchButton,
   MicrophoneButton,
-  UserAvatar,
 };
