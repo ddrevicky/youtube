@@ -1,9 +1,10 @@
 const colors = {
-  menuBackground: '#202020',
+  menuBackground: '#222',
   bodyBackground: '#181818',
+  dynamicPopoverBackground: '#999',
+  staticPopoverBackground: '#666',
   primary: '#FFF',
-  // secondary: '#AAAAAA',
-  secondary: '#909090', // TODO: actually use this in components
+  secondary: '#999', // TODO: actually use this in components
   tertiary: '#6f6f6f',
   quaternary: '#383838', // divider, highlight
   blackish: '#121212',
