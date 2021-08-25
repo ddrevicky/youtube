@@ -12,7 +12,7 @@ function VideoInfo({ video }) {
         <div className="videoTitle">{title}</div>
         <div className="channelNameMeta">
           <Link to={`/channel/${channel.id}`}>
-            <StaticTextPopover text={channel.name}>
+            <StaticTextPopover text={channel.name} top="-3rem">
               <div className="channelName">{channel.name}</div>
             </StaticTextPopover>
           </Link>

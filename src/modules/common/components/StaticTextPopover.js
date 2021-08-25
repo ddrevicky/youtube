@@ -1,13 +1,13 @@
-import { Wrapper } from './StaticTextPopover.styles';
+import { PopoverText, PopoverWrapper } from './StaticTextPopover.styles';
 
-function StaticTextPopover({ children, text, top = '-3rem', right = '0rem' }) {
+function StaticTextPopover({ children, text, top = '-3rem', left = '0rem' }) {
   return (
-    <Wrapper top={top} right={right}>
-      <div className="popover-wrapper">
-        <div className="popover-text">{text}</div>
-        {children}
-      </div>
-    </Wrapper>
+    <PopoverWrapper>
+      <PopoverText top={top} left={left}>
+        {text}
+      </PopoverText>
+      {children}
+    </PopoverWrapper>
   );
 }
 
