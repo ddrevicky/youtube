@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 const NavbarContainer = styled.header`
+  background: ${(props) => props.theme.colors.menuBackground};
   position: fixed;
   width: 100%;
   display: flex;
@@ -59,9 +60,11 @@ const MicrophoneButton = styled.button`
 `;
 
 const NavbarEnd = styled.div`
+  justify-content: space-around;
   display: flex;
   align-items: center;
   gap: 1.7rem;
+  margin-right: 1.7em;
 `;
 
 export {
