@@ -12,6 +12,7 @@ import {
   MdHistory,
   MdWatchLater,
   MdThumbUp,
+  MdPlaylistPlay,
 } from 'react-icons/md';
 import { ReactComponent as YoutubeSvg } from '../../../assets/yt_logo_rgb_dark.svg';
 
@@ -21,6 +22,7 @@ export const AddVideoIcon = (props) => <MdVideoCall {...props} />;
 export const NotificationsIcon = (props) => <MdNotifications {...props} />;
 export const MicrophoneIcon = (props) => <MdMic {...props} />;
 export const SearchIcon = (props) => <MdSearch {...props} />;
+export const PlaylistPlayIcon = (props) => <MdPlaylistPlay {...props} />;
 
 export const HomeIcon = (props) => <MdHome {...props} />;
 export const ExploreIcon = (props) => <MdExplore {...props} />;
