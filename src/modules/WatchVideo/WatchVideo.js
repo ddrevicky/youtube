@@ -29,7 +29,6 @@ function WatchVideo() {
     <Wrapper>
       <div className="row">
         <div className="videoCol">
-          {/* <video className="video">Video</video> */}
           <VideoPlayer options={videoJsOptions} />
           <div>Video Description</div>
           <div>Comments</div>

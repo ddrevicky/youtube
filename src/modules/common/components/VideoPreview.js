@@ -1,5 +1,11 @@
+import { Wrapper } from './VideoPreview.styles';
+
 const VideoPreview = ({ video }) => {
-  return <img className="videoPreview" src={video.url} />;
+  return (
+    <Wrapper>
+      <img className="video-preview" src={video.url} />
+    </Wrapper>
+  );
 };
 
 export default VideoPreview;
