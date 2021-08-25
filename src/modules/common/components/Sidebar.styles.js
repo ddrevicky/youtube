@@ -12,7 +12,7 @@ const SidebarContainer = styled.div`
 const MenuItemContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 0 1.5rem;
+  padding: 0.5rem 1.5rem;
   &:hover {
     background: ${(props) => props.theme.colors.quaternary};
   }

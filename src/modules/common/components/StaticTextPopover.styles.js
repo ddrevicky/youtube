@@ -6,11 +6,14 @@ const Wrapper = styled.div`
     background: ${(props) => props.theme.colors.staticPopoverBackground};
     padding: 0.6rem;
     font-size: 0.75rem;
+    /* max-width: 40rem; */
     position: absolute;
     top: -3rem;
+    /* top: ${(props) => props.top};
+    right: ${(props) => props.right}; */
     visibility: hidden;
-    display: none;
     opacity: 0;
+    z-index: 10;
   }
 
   .popover-wrapper {
@@ -20,8 +23,6 @@ const Wrapper = styled.div`
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s;
-    display: block;
-    /* transition-delay: 1s;  */
   }
 `;
 

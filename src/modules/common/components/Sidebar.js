@@ -1,4 +1,3 @@
-import { MdHome } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { routes } from '../../../utils';
 import {
@@ -10,17 +9,20 @@ import {
 } from './Icons';
 import {
   MenuItemContainer,
-  SidebarContainer,
   MenuItemIconContainer,
   MenuItemLabelContainer,
+  SidebarContainer,
 } from './Sidebar.styles';
+import StaticTextPopover from './StaticTextPopover';
 
-function MenuItem({ title, icon }) {
+function MenuItem({ label, icon }) {
   return (
-    <MenuItemContainer>
-      <MenuItemIconContainer>{icon}</MenuItemIconContainer>
-      <MenuItemLabelContainer>{title}</MenuItemLabelContainer>
-    </MenuItemContainer>
+    <StaticTextPopover text={label} top="3rem" right="10rem">
+      <MenuItemContainer>
+        <MenuItemIconContainer>{icon}</MenuItemIconContainer>
+        <MenuItemLabelContainer>{label}</MenuItemLabelContainer>
+      </MenuItemContainer>
+    </StaticTextPopover>
   );
 }
 
@@ -30,24 +32,24 @@ const iconProps = {
 };
 
 const sidebarHomeSectionItems = [
-  { title: 'Home', path: routes.home, icon: <HomeIcon {...iconProps} /> },
-  { title: 'Explore', path: routes.explore, icon: <ExploreIcon {...iconProps} /> },
+  { label: 'Home', path: routes.home, icon: <HomeIcon {...iconProps} /> },
+  { label: 'Explore', path: routes.explore, icon: <ExploreIcon {...iconProps} /> },
   {
-    title: 'Subscriptions',
+    label: 'Subscriptions',
     path: routes.subscriptions,
     icon: <SubscriptionsIcon {...iconProps} />,
   },
 ];
 
 const sidebarUserVideosSectionItems = [
-  { title: 'Library', path: routes.library, icon: <VideoLibraryIcon {...iconProps} /> },
+  { label: 'Library', path: routes.library, icon: <VideoLibraryIcon {...iconProps} /> },
   {
-    title: 'Watch Later',
+    label: 'Watch Later',
     path: routes.playlist + '/watchLater',
     icon: <WatchLaterIcon {...iconProps} />,
   },
   {
-    title: 'Liked Videos',
+    label: 'Liked Videos',
     path: routes.playlist + '/liked',
     icon: <WatchLaterIcon {...iconProps} />,
   },
@@ -58,15 +60,15 @@ function Sidebar() {
   //
   return (
     <SidebarContainer>
-      {sidebarHomeSectionItems.map(({ title, path, icon }) => (
-        <Link key={title} to={path}>
-          <MenuItem title={title} icon={icon} />
+      {sidebarHomeSectionItems.map(({ label, path, icon }) => (
+        <Link key={label} to={path}>
+          <MenuItem label={label} icon={icon} />
         </Link>
       ))}
       <div className="divider"></div>
-      {sidebarUserVideosSectionItems.map(({ title, path, icon }) => (
-        <Link key={title} to={path}>
-          <MenuItem title={title} icon={icon} />
+      {sidebarUserVideosSectionItems.map(({ label, path, icon }) => (
+        <Link key={label} to={path}>
+          <MenuItem label={label} icon={icon} />
         </Link>
       ))}
       <div className="divider"></div>
