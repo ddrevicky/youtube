@@ -1,4 +1,4 @@
-import { Wrapper } from './VideoInfo.styles';
+import { Wrapper } from './VideoMeta.styles';
 
 function VideoMeta({ views, uploadDatetime }) {
   return (

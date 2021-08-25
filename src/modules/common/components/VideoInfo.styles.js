@@ -22,10 +22,10 @@ const Wrapper = styled.div`
   }
 
   .channelNameMeta {
+    color: ${(props) => props.theme.colors.secondary};
     font-size: 0.9rem;
-    color: rgb(170, 170, 170);
     display: flex;
-    gap: 0.25rem;
+    gap: 0.3rem;
     flex-direction: column;
   }
 
@@ -35,6 +35,10 @@ const Wrapper = styled.div`
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &:hover {
+      color: ${(props) => props.theme.colors.primary};
+    }
   }
 `;
 
