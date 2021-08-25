@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { routes } from '../../../utils';
 import {
   ExploreIcon,
@@ -7,24 +7,8 @@ import {
   VideoLibraryIcon,
   WatchLaterIcon,
 } from './Icons';
-import {
-  MenuItemContainer,
-  MenuItemIconContainer,
-  MenuItemLabelContainer,
-  SidebarContainer,
-} from './Sidebar.styles';
-import StaticTextPopover from './StaticTextPopover';
-
-function MenuItem({ label, icon }) {
-  return (
-    <StaticTextPopover text={label} top="3rem" left="10rem">
-      <MenuItemContainer>
-        <MenuItemIconContainer>{icon}</MenuItemIconContainer>
-        <MenuItemLabelContainer>{label}</MenuItemLabelContainer>
-      </MenuItemContainer>
-    </StaticTextPopover>
-  );
-}
+import { MenuItem } from './MenuItem';
+import { SidebarContainer } from './Sidebar.styles';
 
 // TODO: useTheme hook for sidebar icon size
 const iconProps = {
@@ -58,17 +42,22 @@ const sidebarUserVideosSectionItems = [
 function Sidebar() {
   // TODO: get page url, based on that assign css class selected to menuItem
   //
+  const location = useLocation();
+  const currentPath = location.pathname;
+  // location.pathname;
+  console.log(`location`);
+  console.log(location);
   return (
     <SidebarContainer>
       {sidebarHomeSectionItems.map(({ label, path, icon }) => (
         <Link key={label} to={path}>
-          <MenuItem label={label} icon={icon} />
+          <MenuItem label={label} icon={icon} isSelected={path === currentPath} />
         </Link>
       ))}
       <div className="divider"></div>
       {sidebarUserVideosSectionItems.map(({ label, path, icon }) => (
         <Link key={label} to={path}>
-          <MenuItem label={label} icon={icon} />
+          <MenuItem label={label} icon={icon} isSelected={path === currentPath} />
         </Link>
       ))}
       <div className="divider"></div>
