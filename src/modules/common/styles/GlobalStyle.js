@@ -1,7 +1,6 @@
 import { Global, css } from '@emotion/react';
 
 const globalStyles = (theme) =>
-  console.log(theme) ||
   css`
     body {
       color: ${theme.colors.primary};

@@ -40,13 +40,8 @@ const sidebarUserVideosSectionItems = [
 ];
 
 function Sidebar() {
-  // TODO: get page url, based on that assign css class selected to menuItem
-  //
   const location = useLocation();
   const currentPath = location.pathname;
-  // location.pathname;
-  console.log(`location`);
-  console.log(location);
   return (
     <SidebarContainer>
       {sidebarHomeSectionItems.map(({ label, path, icon }) => (
