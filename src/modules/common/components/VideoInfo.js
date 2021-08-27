@@ -9,14 +9,18 @@ function VideoInfo({ video }) {
   return (
     <Wrapper>
       <div className="info">
-        <div className="videoTitle">{title}</div>
+        <Link to={`/watch/${video.id}`}>
+          <div className="videoTitle">{title}</div>
+        </Link>
         <div className="channelNameMeta">
           <Link to={`/channel/${channel.id}`}>
             <StaticTextPopover text={channel.name} top="-3rem">
               <div className="channelName">{channel.name}</div>
             </StaticTextPopover>
           </Link>
-          <VideoMeta views={views} uploadDatetime={uploadDatetimeText} />
+          <Link to={`/watch/${video.id}`}>
+            <VideoMeta views={views} uploadDatetime={uploadDatetimeText} />
+          </Link>
         </div>
       </div>
     </Wrapper>

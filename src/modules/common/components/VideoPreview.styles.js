@@ -1,21 +1,16 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
-const Wrapper = styled.div`
-  position: relative;
-
-  .video-preview {
-    width: 100%;
-    height: 100%;
-  }
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 const ActionContainer = styled.div`
-  /* visibility: hidden; */
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   padding: 0.2rem;
 
   &:hover {
-    /* visibility: visible; */
+    background: black;
   }
 `;
 
@@ -26,11 +21,12 @@ const ActionsContainer = styled.div`
   gap: 0.3rem;
   top: 0.25rem;
   right: 0.25rem;
+  visibility: hidden;
 `;
 
 const DurationContainer = styled.span`
   color: white;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   bottom: 0.25rem;
   right: 0.25rem;
@@ -39,4 +35,11 @@ const DurationContainer = styled.span`
   font-weight: ${(props) => props.theme.fontWeights.medium};
 `;
 
-export { Wrapper, ActionContainer, ActionsContainer, DurationContainer };
+const Wrapper = styled.div`
+  position: relative;
+  &:hover ${ActionsContainer} {
+    visibility: visible;
+  }
+`;
+
+export { Wrapper, Image, ActionContainer, ActionsContainer, DurationContainer };

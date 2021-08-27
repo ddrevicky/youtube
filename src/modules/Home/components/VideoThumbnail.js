@@ -6,19 +6,17 @@ import { Wrapper } from './VideoThumbnail.styles';
 
 function VideoThumbnail({ video }) {
   return (
-    <Link to={`/watch/${video.id}`}>
-      <Wrapper>
-        <div className="thumbnail">
-          <VideoPreview video={video} />
-          <div className="bottomSection">
-            <Link to={`/channel/${video.channel.id}`}>
-              <Avatar size="36px" />
-            </Link>
-            <VideoInfo video={video} />
-          </div>
+    <Wrapper>
+      <div className="thumbnail">
+        <VideoPreview video={video} />
+        <div className="bottomSection">
+          <Link to={`/channel/${video.channel.id}`}>
+            <Avatar size="36px" />
+          </Link>
+          <VideoInfo video={video} />
         </div>
-      </Wrapper>
-    </Link>
+      </div>
+    </Wrapper>
   );
 }
 

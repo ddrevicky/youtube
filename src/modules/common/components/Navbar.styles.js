@@ -9,6 +9,7 @@ const NavbarContainer = styled.header`
   justify-content: space-between;
   height: ${(props) => props.theme.components.navbar.height};
   padding: '0 16px';
+  z-index: 10;
 
   .nav-icon {
     width: 1.5rem;

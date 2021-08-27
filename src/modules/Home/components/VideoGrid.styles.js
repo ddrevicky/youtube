@@ -6,7 +6,8 @@ const VideoGridContainer = styled.div(({ theme }) => ({
   width: '100%',
   /* TODO: should use rem for column size? */
   gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-  gridGap: '1rem',
+  gridRowGap: '2rem',
+  gridColumnGap: '1rem',
 }));
 
 export { VideoGridContainer };

@@ -1,15 +1,19 @@
+import { Link } from 'react-router-dom';
 import { PlaylistPlayIcon, WatchLaterIcon } from './Icons';
 import {
   ActionContainer,
   ActionsContainer,
   DurationContainer,
+  Image,
   Wrapper,
 } from './VideoPreview.styles';
 
 const VideoPreview = ({ video }) => {
   return (
     <Wrapper>
-      <img className="video-preview" src={video.url} />
+      <Link to={`/watch/${video.id}`}>
+        <Image src={video.url} />
+      </Link>
       <ActionsContainer>
         <ActionContainer>
           <WatchLaterIcon />
