@@ -7,6 +7,7 @@ export const routes = {
   library: '/feed/library',
   playlist: '/playlist',
   channel: '/channel',
+  results: '/results',
 };
 
 export const mockVideos = [

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import StaticTextPopover from './StaticTextPopover';
+import TextPopover from './TextPopover';
 import { Wrapper } from './VideoInfo.styles';
 import VideoMeta from './VideoMeta';
 
@@ -14,9 +14,9 @@ function VideoInfo({ video }) {
         </Link>
         <div className="channelNameMeta">
           <Link to={`/channel/${channel.id}`}>
-            <StaticTextPopover text={channel.name} top="-3rem">
+            <TextPopover text={channel.name} top="-3rem">
               <div className="channelName">{channel.name}</div>
-            </StaticTextPopover>
+            </TextPopover>
           </Link>
           <Link to={`/watch/${video.id}`}>
             <VideoMeta views={views} uploadDatetime={uploadDatetimeText} />

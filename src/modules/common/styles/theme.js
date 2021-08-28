@@ -7,6 +7,7 @@ const colors = {
   secondary: '#999', // TODO: actually use this in components
   tertiary: '#6f6f6f',
   quaternary: '#383838', // divider, highlight
+  quinary: '#323232', // search button
   blackish: '#121212',
   grey: '#202020',
   darkGrey: '#383838',

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 const NavbarContainer = styled.header`
   background: ${({ theme }) => theme.colors.menuBackground};
@@ -23,7 +23,7 @@ const NavbarStart = styled.div`
   padding-left: 1.5rem;
 `;
 
-const NavbarCenter = styled.form`
+const SearchForm = styled.form`
   display: flex;
   align-items: center;
   width: 100%;
@@ -32,30 +32,9 @@ const NavbarCenter = styled.form`
   border: 1px solid #323232;
 `;
 
-const SearchInput = styled.input(({ theme }) => ({
-  backgroundColor: theme.colors.blackish,
-  color: theme.colors.secondary,
-  border: 'none',
-  padding: '0.4rem 0.8rem',
-  lineHeight: '24px',
-  fontSize: '1.1rem',
-  fontFamily: theme.font,
-  flexGrow: 1,
-  flexShrink: 1,
-  width: '100%',
-}));
-
-const SearchButton = styled.button`
-  background-color: #323232;
-  width: 75px;
-  height: 100%;
-  border: none;
-  padding: 0.44rem 0;
-`;
-
 const MicrophoneButton = styled.button`
   padding: 8px;
-  background-color: #181818;
+  background-color: ${({ theme }) => theme.colors.bodyBackground};
   border: none;
   border-radius: 50%;
 `;
@@ -68,12 +47,4 @@ const NavbarEnd = styled.div`
   margin-right: 1.7em;
 `;
 
-export {
-  NavbarStart,
-  NavbarCenter,
-  NavbarEnd,
-  NavbarContainer,
-  SearchInput,
-  SearchButton,
-  MicrophoneButton,
-};
+export { NavbarStart, SearchForm, NavbarEnd, NavbarContainer, MicrophoneButton };

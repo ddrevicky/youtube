@@ -1,19 +1,11 @@
-import { useTheme } from '@emotion/react';
 import { Link } from 'react-router-dom';
 import { routes } from '../../../utils';
 import Avatar from './Avatar';
-import { AddVideoIcon, AppLogo, AppsIcon, MenuIcon, NotificationsIcon, SearchIcon } from './Icons';
-import {
-  NavbarCenter,
-  NavbarContainer,
-  NavbarEnd,
-  NavbarStart,
-  SearchButton,
-  SearchInput,
-} from './Navbar.styles';
+import { AddVideoIcon, AppLogo, AppsIcon, MenuIcon, NotificationsIcon } from './Icons';
+import { NavbarContainer, NavbarEnd, NavbarStart } from './Navbar.styles';
+import SearchBar from './SearchBar';
 
 function Navbar() {
-  const theme = useTheme();
   return (
     <NavbarContainer>
       <NavbarStart>
@@ -22,16 +14,7 @@ function Navbar() {
           <AppLogo className="logo" />
         </Link>
       </NavbarStart>
-      <NavbarCenter>
-        <SearchInput type="text" placeholder="Search" />
-        <SearchButton>
-          <SearchIcon color={theme.colors.tertiary} size={theme.iconSizes.small} />
-        </SearchButton>
-        {/* TODO: Want this? */}
-        {/* <MicrophoneButton>
-          <MicrophoneIcon />
-        </MicrophoneButton> */}
-      </NavbarCenter>
+      <SearchBar />
       <NavbarEnd>
         <AddVideoIcon className="nav-icon" />
         <AppsIcon className="nav-icon" />

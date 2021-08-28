@@ -1,6 +1,8 @@
+import { useParams } from 'react-router-dom';
 import { SearchResultsContainer } from './SearchResults.styles';
 
 function SearchResults() {
+  const { searchQuery } = useParams();
   return (
     <div
       style={{
@@ -10,7 +12,7 @@ function SearchResults() {
         justifyContent: 'center',
       }}
     >
-      <SearchResultsContainer> RESULTS </SearchResultsContainer>;
+      <SearchResultsContainer> {searchQuery} </SearchResultsContainer>;
     </div>
   );
 }
