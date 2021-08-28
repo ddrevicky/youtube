@@ -15,7 +15,7 @@ function VideoInfo({ video }) {
         <div className="channelNameMeta">
           <Link to={`/channel/${channel.id}`}>
             <TextPopover text={channel.name} top="-3rem">
-              <div className="channelName">{channel.name}</div>
+              <span className="channelName">{channel.name}</span>
             </TextPopover>
           </Link>
           <Link to={`/watch/${video.id}`}>

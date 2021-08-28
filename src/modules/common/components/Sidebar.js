@@ -74,9 +74,9 @@ function Sidebar() {
   return (
     <SidebarContainer>
       <SidebarSection sectionItems={homeSectionItems} />
-      <div className="divider"></div>
+      <div className="divider" />
       <SidebarSection sectionItems={userVideosSectionItems} />
-      <div className="divider"></div>
+      <div className="divider" />
       <SectionTitleContainer>Subscriptions</SectionTitleContainer>
       <SidebarSection sectionItems={subscriptionsSectionItems} />
     </SidebarContainer>

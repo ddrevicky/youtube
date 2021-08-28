@@ -14,6 +14,7 @@ const globalStyles = (theme) =>
 
     .flex-row {
       display: flex;
+      align-items: center;
     }
 
     .divider {

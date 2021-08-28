@@ -8,6 +8,7 @@ const Image = styled.img`
 const ActionContainer = styled.div`
   background: rgba(0, 0, 0, 0.7);
   padding: 0.2rem;
+  cursor: pointer;
 
   &:hover {
     background: black;
@@ -37,6 +38,7 @@ const DurationContainer = styled.span`
 
 const Wrapper = styled.div`
   position: relative;
+  width: 100%;
   &:hover ${ActionsContainer} {
     visibility: visible;
   }

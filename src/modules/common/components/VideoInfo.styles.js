@@ -35,9 +35,11 @@ const Wrapper = styled.div`
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: color 0.2s;
 
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
+      transition: color 0.3s;
     }
   }
 `;

@@ -1,25 +1,19 @@
 import { useParams } from 'react-router-dom';
+import { mockVideos } from '../../utils';
+import SearchResultThumbnail from './components/SearchResultThumbnail';
 import { SearchResultsContainer } from './SearchResults.styles';
 
 function SearchResults() {
   const { searchQuery } = useParams();
+  const resultVideos = mockVideos.slice(0, 6);
   return (
-    <div
-      style={{
-        width: '100%',
-        backgroundColor: 'rgba(255, 0, 0, 0.1)',
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
-      <SearchResultsContainer> {searchQuery} </SearchResultsContainer>;
-    </div>
+    <SearchResultsContainer>
+      <div className="divider" />
+      {resultVideos.map((video, idx) => (
+        <SearchResultThumbnail video={video} key={idx} />
+      ))}
+    </SearchResultsContainer>
   );
 }
 
 export default SearchResults;
-
-// TODO:
-// flex-row  (filters, videolist)
-// flex-column (video list)
-// flex-row: VideoPreview VideoDescription
