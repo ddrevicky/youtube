@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const Wrapper = styled.div`
   .row {
     display: flex;
-    gap: ${(props) => props.theme.paddings.section};
+    gap: ${({ theme }) => theme.paddings.section};
   }
 
   .videoCol {

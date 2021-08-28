@@ -32,7 +32,7 @@ const DurationContainer = styled.span`
   right: 0.25rem;
   padding: 0.2rem;
   font-size: 0.85rem;
-  font-weight: ${(props) => props.theme.fontWeights.medium};
+  font-weight: ${({ theme }) => theme.fontWeights.medium};
 `;
 
 const Wrapper = styled.div`

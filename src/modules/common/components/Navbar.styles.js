@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
 const NavbarContainer = styled.header`
-  background: ${(props) => props.theme.colors.menuBackground};
+  background: ${({ theme }) => theme.colors.menuBackground};
   position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: ${(props) => props.theme.components.navbar.height};
+  height: ${({ theme }) => theme.components.navbar.height};
   padding: '0 16px';
   z-index: 10;
 

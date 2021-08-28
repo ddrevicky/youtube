@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 const Wrapper = styled.div`
-  background: ${(props) => props.theme.colors.menuBackground};
-  font-family: ${(props) => props.theme.font};
+  background: ${({ theme }) => theme.colors.menuBackground};
+  font-family: ${({ theme }) => theme.font};
 
   .body {
     height: 100%;
@@ -13,11 +13,11 @@ const Wrapper = styled.div`
 
   .content {
     width: 100%;
-    background: ${(props) => props.theme.colors.bodyBackground};
-    margin-top: ${(props) => props.theme.components.navbar.height};
-    margin-left: ${(props) => props.theme.components.sidebarLarge.width};
-    padding-top: ${(props) => props.theme.paddings.section};
-    padding-left: ${(props) => props.theme.paddings.section};
+    background: ${({ theme }) => theme.colors.bodyBackground};
+    margin-top: ${({ theme }) => theme.components.navbar.height};
+    margin-left: ${({ theme }) => theme.components.sidebarLarge.width};
+    padding-top: ${({ theme }) => theme.paddings.section};
+    padding-left: ${({ theme }) => theme.paddings.section};
   }
 `;
 

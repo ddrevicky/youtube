@@ -4,23 +4,23 @@ const MenuItemContainer = styled.div`
   display: flex;
   align-items: center;
 
-  padding-top: ${(props) => props.theme.components.menuItem.paddingVertical};
-  padding-bottom: ${(props) => props.theme.components.menuItem.paddingVertical};
-  padding-left: ${(props) => props.theme.components.menuItem.paddingHorizontal};
-  padding-right: ${(props) => props.theme.components.menuItem.paddingHorizontal};
+  padding-top: ${({ theme }) => theme.components.menuItem.paddingVertical};
+  padding-bottom: ${({ theme }) => theme.components.menuItem.paddingVertical};
+  padding-left: ${({ theme }) => theme.components.menuItem.paddingHorizontal};
+  padding-right: ${({ theme }) => theme.components.menuItem.paddingHorizontal};
 
   &:hover {
-    background: ${(props) => props.theme.colors.quaternary};
+    background: ${({ theme }) => theme.colors.quaternary};
   }
 `;
 
 const MenuItemIconContainer = styled.div`
   margin-right: 1.5rem;
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.secondary};
 `;
 
 const MenuItemLabelContainer = styled.div`
-  font-size: ${(props) => props.theme.components.menuItem.fontSize};
+  font-size: ${({ theme }) => theme.components.menuItem.fontSize};
 
   /* TODO: utility class for line clamping */
   display: -webkit-box;
@@ -32,13 +32,13 @@ const MenuItemLabelContainer = styled.div`
 
 const Wrapper = styled.div`
   .selected {
-    font-weight: ${(props) => props.theme.fontWeights.medium};
-    background: ${(props) => props.theme.colors.quaternary};
+    font-weight: ${({ theme }) => theme.fontWeights.medium};
+    background: ${({ theme }) => theme.colors.quaternary};
     &:hover {
-      background: ${(props) => props.theme.colors.tertiary};
+      background: ${({ theme }) => theme.colors.tertiary};
     }
     ${MenuItemIconContainer} {
-      color: ${(props) => props.theme.colors.primary};
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 `;

@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   }
 
   .channelNameMeta {
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.secondary};
     font-size: 0.9rem;
     display: flex;
     gap: 0.3rem;
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
     text-overflow: ellipsis;
 
     &:hover {
-      color: ${(props) => props.theme.colors.primary};
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 `;
