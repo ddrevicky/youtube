@@ -15,7 +15,7 @@ const iconProps = {
   size: '1.5rem',
 };
 
-const sidebarHomeSectionItems = [
+const homeSectionItems = [
   { label: 'Home', path: routes.home, icon: <HomeIcon {...iconProps} /> },
   { label: 'Explore', path: routes.explore, icon: <ExploreIcon {...iconProps} /> },
   {
@@ -25,7 +25,7 @@ const sidebarHomeSectionItems = [
   },
 ];
 
-const sidebarUserVideosSectionItems = [
+const userVideosSectionItems = [
   { label: 'Library', path: routes.library, icon: <VideoLibraryIcon {...iconProps} /> },
   {
     label: 'Watch Later',
@@ -39,24 +39,32 @@ const sidebarUserVideosSectionItems = [
   },
 ];
 
-function Sidebar() {
+const subscriptionsSectionItems = [
+  { label: 'Library', path: routes.library, icon: <VideoLibraryIcon {...iconProps} /> },
+];
+
+function SidebarSection({ sectionItems }) {
   const location = useLocation();
-  const currentPath = location.pathname;
+  return (
+    <>
+      {sectionItems.map(({ label, path, icon }) => (
+        <Link key={label} to={path}>
+          <MenuItem label={label} icon={icon} isSelected={path === location.pathname} />
+        </Link>
+      ))}
+    </>
+  );
+}
+
+function Sidebar() {
   return (
     <SidebarContainer>
-      {sidebarHomeSectionItems.map(({ label, path, icon }) => (
-        <Link key={label} to={path}>
-          <MenuItem label={label} icon={icon} isSelected={path === currentPath} />
-        </Link>
-      ))}
+      <SidebarSection sectionItems={homeSectionItems} />
       <div className="divider"></div>
-      {sidebarUserVideosSectionItems.map(({ label, path, icon }) => (
-        <Link key={label} to={path}>
-          <MenuItem label={label} icon={icon} isSelected={path === currentPath} />
-        </Link>
-      ))}
+      <SidebarSection sectionItems={userVideosSectionItems} />
       <div className="divider"></div>
-      <div>Subscriptions</div>
+      <h3>Subscriptions</h3>
+      <SidebarSection sectionItems={subscriptionsSectionItems} />
     </SidebarContainer>
   );
 }
