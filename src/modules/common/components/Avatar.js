@@ -1,7 +1,8 @@
 import { AvatarImg } from './Avatar.styles';
 
 function Avatar({ size = '36px' }) {
-  return <AvatarImg size={size} src="http://unsplash.it/36/36?gravity=center?page=1" />;
+  const avatarSrc = `https://picsum.photos/50/50?random=${Math.floor(Math.random() * 100) + 1}`;
+  return <AvatarImg size={size} src={avatarSrc} />;
 }
 
 export default Avatar;
