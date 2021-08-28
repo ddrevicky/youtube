@@ -16,6 +16,13 @@ const MenuItemIconContainer = styled.div`
 
 const MenuItemLabelContainer = styled.div`
   font-size: 0.875rem;
+
+  /* TODO: utility class for line clamping */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const Wrapper = styled.div`
