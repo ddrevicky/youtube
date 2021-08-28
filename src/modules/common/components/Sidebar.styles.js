@@ -4,9 +4,20 @@ const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: ${(props) => props.theme.components.sidebarLarge.width};
+  width: ${({ theme }) => theme.components.sidebarLarge.width};
   position: fixed;
-  top: ${(props) => props.theme.components.navbar.height};
+  top: ${({ theme }) => theme.components.navbar.height};
 `;
 
-export { SidebarContainer };
+const SectionTitleContainer = styled.h3`
+  padding-top: ${({ theme }) => theme.components.menuItem.paddingVertical};
+  padding-bottom: ${({ theme }) => theme.components.menuItem.paddingVertical};
+  padding-left: ${({ theme }) => theme.components.menuItem.paddingHorizontal};
+  padding-right: ${({ theme }) => theme.components.menuItem.paddingHorizontal};
+  font-size: ${({ theme }) => theme.components.menuItem.fontSize};
+  font-weight: ${({ theme }) => theme.fontWeights.medium};
+  color: ${({ theme }) => theme.colors.secondary};
+  text-transform: uppercase;
+`;
+
+export { SidebarContainer, SectionTitleContainer };

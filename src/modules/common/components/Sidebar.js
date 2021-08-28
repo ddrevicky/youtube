@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { routes } from '../../../utils';
+import Avatar from './Avatar';
 import {
   ExploreIcon,
   HomeIcon,
@@ -8,7 +9,7 @@ import {
   WatchLaterIcon,
 } from './Icons';
 import { MenuItem } from './MenuItem';
-import { SidebarContainer } from './Sidebar.styles';
+import { SectionTitleContainer, SidebarContainer } from './Sidebar.styles';
 
 // TODO: useTheme hook for sidebar icon size
 const iconProps = {
@@ -40,7 +41,20 @@ const userVideosSectionItems = [
 ];
 
 const subscriptionsSectionItems = [
-  { label: 'Library', path: routes.library, icon: <VideoLibraryIcon {...iconProps} /> },
+  {
+    label: 'Homeboy Industries',
+    path: `${routes.channel}/homeboy`,
+    icon: <Avatar {...iconProps} />,
+  },
+  { label: 'Molly Rocket', path: `${routes.channel}/mollyrocket`, icon: <Avatar {...iconProps} /> },
+  { label: 'Abhishek Thakur', path: `${routes.channel}/abhishek`, icon: <Avatar {...iconProps} /> },
+  { label: '3Blue1Brown', path: `${routes.channel}/3b1b`, icon: <Avatar {...iconProps} /> },
+  {
+    label: 'The Daily Show With Jon Stewart',
+    path: `${routes.channel}/dailyshow`,
+    icon: <Avatar {...iconProps} />,
+  },
+  { label: 'Radio Rock', path: `${routes.channel}/radioRock`, icon: <Avatar {...iconProps} /> },
 ];
 
 function SidebarSection({ sectionItems }) {
@@ -63,7 +77,7 @@ function Sidebar() {
       <div className="divider"></div>
       <SidebarSection sectionItems={userVideosSectionItems} />
       <div className="divider"></div>
-      <h3>Subscriptions</h3>
+      <SectionTitleContainer>Subscriptions</SectionTitleContainer>
       <SidebarSection sectionItems={subscriptionsSectionItems} />
     </SidebarContainer>
   );

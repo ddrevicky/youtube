@@ -35,6 +35,11 @@ const paddings = {
 const components = {
   navbar: { height: '56px' },
   sidebarLarge: { width: '240px' },
+  menuItem: {
+    fontSize: '0.875rem',
+    paddingVertical: '0.5rem',
+    paddingHorizontal: '1.5rem',
+  },
 };
 
 export const darkTheme = {

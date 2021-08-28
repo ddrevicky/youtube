@@ -3,7 +3,12 @@ import styled from '@emotion/styled/macro';
 const MenuItemContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 0.5rem 1.5rem;
+
+  padding-top: ${(props) => props.theme.components.menuItem.paddingVertical};
+  padding-bottom: ${(props) => props.theme.components.menuItem.paddingVertical};
+  padding-left: ${(props) => props.theme.components.menuItem.paddingHorizontal};
+  padding-right: ${(props) => props.theme.components.menuItem.paddingHorizontal};
+
   &:hover {
     background: ${(props) => props.theme.colors.quaternary};
   }
@@ -15,7 +20,7 @@ const MenuItemIconContainer = styled.div`
 `;
 
 const MenuItemLabelContainer = styled.div`
-  font-size: 0.875rem;
+  font-size: ${(props) => props.theme.components.menuItem.fontSize};
 
   /* TODO: utility class for line clamping */
   display: -webkit-box;

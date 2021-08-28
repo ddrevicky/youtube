@@ -19,7 +19,7 @@ const globalStyles = (theme) =>
     .divider {
       height: 1px;
       background: ${theme.colors.quaternary};
-      margin: 1rem 0;
+      margin: 0.5rem 0;
       margin-right: 0.3rem;
     }
   `;
