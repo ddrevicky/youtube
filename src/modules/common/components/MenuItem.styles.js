@@ -17,6 +17,7 @@ const MenuItemContainer = styled.div`
 const MenuItemIconContainer = styled.div`
   margin-right: 1.5rem;
   color: ${({ theme }) => theme.colors.secondary};
+  display: flex;
 `;
 
 const MenuItemLabelContainer = styled.div`

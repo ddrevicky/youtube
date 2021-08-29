@@ -36,6 +36,7 @@ const paddings = {
 const components = {
   navbar: { height: '56px' },
   sidebarLarge: { width: '240px' },
+  sidebarMini: { width: '72px' },
   menuItem: {
     fontSize: '0.875rem',
     paddingVertical: '0.5rem',
