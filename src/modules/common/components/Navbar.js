@@ -19,7 +19,7 @@ function Navbar() {
         <AddVideoIcon className="nav-icon" />
         <AppsIcon className="nav-icon" />
         <NotificationsIcon className="nav-icon" />
-        <Avatar size="36px" />
+        <Avatar size="32px" />
       </NavbarEnd>
     </NavbarContainer>
   );
