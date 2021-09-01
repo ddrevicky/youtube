@@ -33,6 +33,10 @@ const paddings = {
   section: '20px',
 };
 
+const zIndices = {
+  menuOverlay: 10,
+};
+
 const components = {
   navbar: { height: '56px' },
   sidebarLarge: { width: '240px' },
@@ -50,5 +54,6 @@ export const darkTheme = {
   iconSizes,
   paddings,
   components,
+  zIndices,
   font: "'Roboto', Arial, sans-serif",
 };

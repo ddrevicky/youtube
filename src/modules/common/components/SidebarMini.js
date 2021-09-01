@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { routes } from '../../../utils';
 import { ExploreIcon, HomeIcon, SubscriptionsIcon, VideoLibraryIcon } from './Icons';
+import MenuItemMini from './MenuItemMini';
 import { SidebarMiniContainer } from './SidebarMini.styles';
 
 const iconProps = {
@@ -17,15 +18,6 @@ const miniSidebarItems = [
   },
   { label: 'Library', path: routes.library, icon: <VideoLibraryIcon {...iconProps} /> },
 ];
-
-function MenuItemMini({ label, icon, isSelected }) {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <div>{icon}</div>
-      <span>{label}</span>
-    </div>
-  );
-}
 
 function SidebarMini() {
   const location = useLocation();

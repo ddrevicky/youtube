@@ -1,17 +1,20 @@
-import { Wrapper } from './AppLayout.styles';
+import { useState } from 'react';
+import { BodyContainer, ContentContainer, Wrapper } from './AppLayout.styles';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import SidebarMini from './SidebarMini';
 
 function AppLayout({ children }) {
+  const [isSidebarLarge, setIsSidebarLarge] = useState(true);
+  const toggleIsSidebarLarge = () => setIsSidebarLarge(!isSidebarLarge);
+
   return (
     <Wrapper>
-      <Navbar />
-      <div className="body">
-        <Sidebar />
-        {/* <SidebarMini /> */}
-        <div className="content">{children}</div>
-      </div>
+      <Navbar toggleIsSidebarLarge={toggleIsSidebarLarge} />
+      <BodyContainer>
+        {isSidebarLarge ? <Sidebar /> : <SidebarMini />}
+        <ContentContainer>{children}</ContentContainer>
+      </BodyContainer>
     </Wrapper>
   );
 }

@@ -2,7 +2,8 @@ import styled from '@emotion/styled/macro';
 
 const NavbarContainer = styled.header`
   background: ${({ theme }) => theme.colors.menuBackground};
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   display: flex;
   align-items: center;

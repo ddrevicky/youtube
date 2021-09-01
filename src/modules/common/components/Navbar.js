@@ -5,11 +5,11 @@ import { AddVideoIcon, AppLogo, AppsIcon, MenuIcon, NotificationsIcon } from './
 import { NavbarContainer, NavbarEnd, NavbarStart } from './Navbar.styles';
 import SearchBar from './SearchBar';
 
-function Navbar() {
+function Navbar({ toggleIsSidebarLarge }) {
   return (
     <NavbarContainer>
       <NavbarStart>
-        <MenuIcon className="nav-icon" />
+        <MenuIcon className="nav-icon" onClick={toggleIsSidebarLarge} />
         <Link to={routes.home}>
           <AppLogo className="logo" />
         </Link>

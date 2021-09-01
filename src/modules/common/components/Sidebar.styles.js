@@ -4,8 +4,9 @@ const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: ${({ theme }) => theme.components.sidebarLarge.width};
-  position: fixed;
+  min-width: ${({ theme }) => theme.components.sidebarLarge.width};
+  position: sticky;
+  z-index: ${({ theme }) => theme.zIndices.menuOverlay};
   top: ${({ theme }) => theme.components.navbar.height};
 `;
 
