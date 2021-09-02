@@ -1,10 +1,10 @@
 import { Wrapper } from './WatchVideo.styles';
 import { mockVideos } from '../../utils';
 import VideoPlayer from '../common/components/VideoPlayer';
-import VideoThumbnail from '../Home/components/VideoThumbnail';
+import WatchVideoThumbnail from './components/WatchVideoThumbnail';
 
 function WatchVideo() {
-  const suggestedVideos = mockVideos.slice(0, 6);
+  const suggestedVideos = mockVideos.slice(0, 10);
 
   const videoJsOptions = {
     // lookup the options in the docs for more options
@@ -34,10 +34,9 @@ function WatchVideo() {
           <div>Comments</div>
         </div>
         <div className="suggestedCol">
-          <VideoThumbnail video={suggestedVideos[0]} />
-          <VideoThumbnail video={suggestedVideos[1]} />
-          <VideoThumbnail video={suggestedVideos[2]} />
-          <VideoThumbnail video={suggestedVideos[3]} />
+          {suggestedVideos.map((video, idx) => (
+            <WatchVideoThumbnail video={video} key={idx} />
+          ))}
         </div>
       </div>
     </Wrapper>

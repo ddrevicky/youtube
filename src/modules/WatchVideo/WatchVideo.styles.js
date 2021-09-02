@@ -17,6 +17,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     flex-shrink: 0;
     flex-grow: 0;
+    gap: 0.5rem;
   }
 `;
 
