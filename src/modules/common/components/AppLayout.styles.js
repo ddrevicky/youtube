@@ -15,8 +15,7 @@ const BodyContainer = styled.div`
 const ContentContainer = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.colors.bodyBackground};
-  padding-top: ${({ theme }) => theme.paddings.section};
-  padding-left: ${({ theme }) => theme.paddings.section};
+  padding: ${({ theme }) => theme.paddings.section};
 `;
 
 export { Wrapper, BodyContainer, ContentContainer };

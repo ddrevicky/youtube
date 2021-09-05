@@ -5,12 +5,11 @@ import VideoMeta from './VideoMeta';
 
 function VideoInfo({ video }) {
   const { title, channel, views, uploadDatetime } = video;
-  const uploadDatetimeText = uploadDatetime.format('MMM D YYYY');
   return (
     <Wrapper>
       <div className="info">
         <Link to={`/watch/${video.id}`}>
-          <div className="videoTitle">{title}</div>
+          <div className="title-primary">{title}</div>
         </Link>
         <div className="channelNameMeta">
           <Link to={`/channel/${channel.id}`}>
@@ -19,7 +18,7 @@ function VideoInfo({ video }) {
             </TextPopover>
           </Link>
           <Link to={`/watch/${video.id}`}>
-            <VideoMeta views={views} uploadDatetime={uploadDatetimeText} />
+            <VideoMeta views={views} uploadDatetime={uploadDatetime} />
           </Link>
         </div>
       </div>
