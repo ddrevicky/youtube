@@ -1,11 +1,17 @@
-import { Wrapper, VideoInfoWrapper, VideoInfoMenuItemWrapper } from './WatchVideo.styles';
-import { mockVideos } from '../../utils';
+import {
+  Wrapper,
+  VideoInfoWrapper,
+  VideoInfoMenuItemWrapper,
+  VideoDescriptionWrapper,
+} from './WatchVideo.styles';
+import { mockVideos, routes } from '../../utils';
 import VideoPlayer from '../common/components/VideoPlayer';
 import WatchVideoThumbnail from './components/WatchVideoThumbnail';
 import VideoMeta from '../common/components/VideoMeta';
-import { MenuItem } from '../common/components/MenuItem';
-import { HomeIcon, PlaylistAddIcon, ThumbDownIcon, ThumbUpIcon } from '../common/components/Icons';
+import { PlaylistAddIcon, ThumbDownIcon, ThumbUpIcon } from '../common/components/Icons';
 import TextPopover from '../common/components/TextPopover';
+import Avatar from '../common/components/Avatar';
+import { Link } from 'react-router-dom';
 
 function VideoInfoMenuItem({ label, icon, popoverText }) {
   return (
@@ -15,10 +21,6 @@ function VideoInfoMenuItem({ label, icon, popoverText }) {
           <span>{icon}</span>
           <span>{label}</span>
         </VideoInfoMenuItemWrapper>
-        {/* <MenuItemContainer className={isSelected && 'selected'}> */}
-        {/* <MenuItemIconContainer>{icon}</MenuItemIconContainer> */}
-        {/* <MenuItemLabelContainer>{label}</MenuItemLabelContainer> */}
-        {/* </MenuItemContainer> */}
       </TextPopover>
     </Wrapper>
   );
@@ -35,7 +37,7 @@ function VideoInfo({ video }) {
 
   return (
     <VideoInfoWrapper>
-      <div className="title-primary video-title">{title}</div>
+      <h1 className="title-primary video-title">{title}</h1>
       <div className="meta-actions">
         <span className="meta">
           <VideoMeta views={views} uploadDatetime={uploadDatetime} />
@@ -64,18 +66,36 @@ function VideoInfo({ video }) {
           <VideoInfoMenuItem label="Save" icon={<PlaylistAddIcon {...actionIconProps} />} />
         </div>
       </div>
-      <div className="divider" />
-      <div style={{ display: 'flex' }}></div>
-      <div>
-        <div>Avatar</div>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div>{channel.name}</div>
-          <div>10000 Subscribers</div>
-          <div>{description}</div>
-        </div>
-      </div>
     </VideoInfoWrapper>
   );
+}
+
+function VideoDescription({ video }) {
+  const { title, views, uploadDatetime, likes, dislikes, description, channel } = video;
+
+  return (
+    <VideoDescriptionWrapper>
+      <div className="avatar-description">
+        <div>
+          <Link to={`${routes.channel}/${channel.id}`}>
+            <Avatar />
+          </Link>
+        </div>
+        <div className="description-column">
+          <Link to={`${routes.channel}/${channel.id}`}>
+            <span className="channel-name">{channel.name}</span>
+          </Link>
+          <span className="channel-subscribers">10K subscribers</span>
+          <p className="description-text">{description}</p>
+        </div>
+      </div>
+      <button>SUBSCRIBED</button>
+    </VideoDescriptionWrapper>
+  );
+}
+
+function VideoComments() {
+  return <div>Comments</div>;
 }
 
 function WatchVideo() {
@@ -106,8 +126,10 @@ function WatchVideo() {
       <div className="video-column">
         <VideoPlayer options={videoJsOptions} />
         <VideoInfo video={currentVideo} />
-        <div>Video Description</div>
-        <div>Comments</div>
+        <div className="divider" />
+        <VideoDescription video={currentVideo} />
+        <div className="divider" />
+        <VideoComments />
       </div>
       <div className="suggested-videos">
         {suggestedVideos.map((video, idx) => (
