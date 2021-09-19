@@ -10,9 +10,11 @@ function VideoThumbnail({ video }) {
       <div className="thumbnail">
         <VideoPreview video={video} />
         <div className="bottomSection">
-          <Link to={`/channel/${video.channel.id}`}>
-            <Avatar size="36px" />
-          </Link>
+          <div>
+            <Link to={`/channel/${video.channel.id}`}>
+              <Avatar size="36px" />
+            </Link>
+          </div>
           <VideoInfo video={video} />
         </div>
       </div>

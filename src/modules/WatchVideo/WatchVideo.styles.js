@@ -55,6 +55,10 @@ const VideoInfoMenuItemWrapper = styled.div`
   text-transform: uppercase;
   font-size: 0.9rem;
   cursor: pointer;
+
+  .inactive-icon {
+    color: ${({ theme }) => theme.colors.tertiary};
+  }
 `;
 
 const VideoDescriptionWrapper = styled.div`
@@ -89,4 +93,16 @@ const VideoDescriptionWrapper = styled.div`
   }
 `;
 
-export { Wrapper, VideoInfoWrapper, VideoInfoMenuItemWrapper, VideoDescriptionWrapper };
+const VideoCommentsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
+
+export {
+  Wrapper,
+  VideoInfoWrapper,
+  VideoInfoMenuItemWrapper,
+  VideoDescriptionWrapper,
+  VideoCommentsWrapper,
+};

@@ -3,26 +3,26 @@ import {
   VideoInfoWrapper,
   VideoInfoMenuItemWrapper,
   VideoDescriptionWrapper,
+  VideoCommentsWrapper,
 } from './WatchVideo.styles';
-import { mockVideos, routes } from '../../utils';
+import { mockComments, mockVideos, routes } from '../../utils';
 import VideoPlayer from '../common/components/VideoPlayer';
 import WatchVideoThumbnail from './components/WatchVideoThumbnail';
+import Comment from './components/Comment';
 import VideoMeta from '../common/components/VideoMeta';
 import { PlaylistAddIcon, ThumbDownIcon, ThumbUpIcon } from '../common/components/Icons';
 import TextPopover from '../common/components/TextPopover';
 import Avatar from '../common/components/Avatar';
 import { Link } from 'react-router-dom';
 
-function VideoInfoMenuItem({ label, icon, popoverText }) {
+function VideoInfoMenuItem({ label, icon, isInactiveIcon, popoverText }) {
   return (
-    <Wrapper>
-      <TextPopover text={popoverText ? popoverText : label} top="2rem" left="1rem">
-        <VideoInfoMenuItemWrapper>
-          <span>{icon}</span>
-          <span>{label}</span>
-        </VideoInfoMenuItemWrapper>
-      </TextPopover>
-    </Wrapper>
+    <TextPopover text={popoverText ? popoverText : label} top="2rem" left="1rem">
+      <VideoInfoMenuItemWrapper>
+        <span className={isInactiveIcon && 'inactive-icon'}>{icon}</span>
+        <span>{label}</span>
+      </VideoInfoMenuItemWrapper>
+    </TextPopover>
   );
 }
 
@@ -33,7 +33,6 @@ function VideoInfo({ video }) {
   };
 
   const likeStatus = 'liked';
-  const inactiveLikeColor = '#555';
 
   return (
     <VideoInfoWrapper>
@@ -46,22 +45,14 @@ function VideoInfo({ video }) {
           <VideoInfoMenuItem
             label={likes}
             popoverText="I like this"
-            icon={
-              <ThumbUpIcon
-                {...actionIconProps}
-                color={likeStatus !== 'liked' && inactiveLikeColor}
-              />
-            }
+            icon={<ThumbUpIcon {...actionIconProps} />}
+            isInactiveIcon={likeStatus !== 'liked'}
           />
           <VideoInfoMenuItem
             label={dislikes}
             popoverText="I dislike this"
-            icon={
-              <ThumbDownIcon
-                {...actionIconProps}
-                color={likeStatus !== 'disliked' && inactiveLikeColor}
-              />
-            }
+            icon={<ThumbDownIcon {...actionIconProps} />}
+            isInactiveIcon={likeStatus !== 'disliked'}
           />
           <VideoInfoMenuItem label="Save" icon={<PlaylistAddIcon {...actionIconProps} />} />
         </div>
@@ -95,11 +86,18 @@ function VideoDescription({ video }) {
 }
 
 function VideoComments() {
-  return <div>Comments</div>;
+  const comments = mockComments;
+  return (
+    <VideoCommentsWrapper>
+      {mockComments.map((comment) => (
+        <Comment comment={comment} />
+      ))}
+    </VideoCommentsWrapper>
+  );
 }
 
 function WatchVideo() {
-  const suggestedVideos = mockVideos.slice(0, 10);
+  const suggestedVideos = mockVideos;
   const currentVideo = mockVideos[0];
 
   const videoJsOptions = {
@@ -116,7 +114,7 @@ function WatchVideo() {
     sources: [
       {
         // https://pixabay.com/videos/lake-houses-hill-mountain-boat-67201/
-        src: 'https://vod-progressive.akamaized.net/exp=1629398593~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4327%2F20%2F521635037%2F2436722604.mp4~hmac=be9f402b2753dce86cde3995f2ac3540215b32ec21839327547737ea0cb1e3c3/vimeo-prod-skyfire-std-us/01/4327/20/521635037/2436722604.mp4?filename=Lake+-+67201.mp4',
+        src: 'https://vod-progressive.akamaized.net/exp=1632086098~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4327%2F20%2F521635037%2F2436722627.mp4~hmac=808f492a091e0ec71db8c856b269447e58171cfaf6155990506cf33a3155a519/vimeo-prod-skyfire-std-us/01/4327/20/521635037/2436722627.mp4?filename=Lake+-+67201.mp4',
         type: 'video/mp4',
       },
     ],

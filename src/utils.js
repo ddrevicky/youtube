@@ -204,3 +204,34 @@ export const mockVideos = [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Aenean fermentum risus id tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque pretium lectus id turpis. Nullam sit amet magna in magna gravida vehicula. Mauris elementum mauris vitae tortor. Etiam bibendum elit eget erat. Integer malesuada. Etiam quis quam. Nulla pulvinar eleifend sem. Sed convallis magna eu sem.',
   },
 ];
+
+export const mockComments = [
+  {
+    text: "I'd like you to have a good day today.",
+    datetime: dayjs(),
+    likes: 12,
+    dislikes: 2,
+    channel: { name: 'Stanley Kubrick', id: 1234 },
+  },
+  {
+    text: "I'd like you to have a good day today.",
+    datetime: dayjs(),
+    likes: 3,
+    dislikes: 0,
+    channel: { name: 'Quentin Tarantino', id: 1234 },
+  },
+  {
+    text: 'Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Aenean fermentum risus id tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas..',
+    datetime: dayjs(),
+    likes: 1,
+    dislikes: 3,
+    channel: { name: 'Quentin Tarantino', id: 1234 },
+  },
+  {
+    text: "I'd like you to have a good day today.",
+    datetime: dayjs(),
+    likes: 42,
+    dislikes: 2,
+    channel: { name: 'Quentin Tarantino', id: 1234 },
+  },
+];
