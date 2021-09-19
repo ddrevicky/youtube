@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { routes } from '../../../utils';
+import ActionButton from '../../common/components/ActionButton';
 import Avatar from '../../common/components/Avatar';
 import { VideoDescriptionWrapper } from './VideoDescription.styles';
 
@@ -22,7 +23,7 @@ function VideoDescription({ video }) {
           <p className="description-text">{description}</p>
         </div>
       </div>
-      <button>SUBSCRIBED</button>
+      <ActionButton label="SUBSCRIBED" />
     </VideoDescriptionWrapper>
   );
 }
