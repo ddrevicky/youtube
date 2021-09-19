@@ -2,18 +2,29 @@ import styled from '@emotion/styled';
 
 const VideoDescriptionWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  font-size: 0.9rem;
+  gap: 1rem;
 
-  .avatar-description {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .description-column {
+  /* .description-column {
     display: flex;
     flex-direction: column;
-    max-width: 40rem;
     font-size: 0.9rem;
+  } */
+
+  .channel-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .channel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 100%;
   }
 
   .channel-name {
@@ -23,12 +34,12 @@ const VideoDescriptionWrapper = styled.div`
   .channel-subscribers {
     color: ${({ theme }) => theme.colors.secondary};
     font-size: 0.8rem;
-    margin-top: 0.3rem;
-    margin-bottom: 1rem;
   }
 
   .description-text {
+    margin-left: 4rem;
     line-height: 1.25rem;
+    max-width: 40rem;
   }
 `;
 

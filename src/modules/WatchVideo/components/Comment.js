@@ -28,7 +28,7 @@ function Comment({ comment }) {
     <CommentWrapper>
       <div>
         <Link to={`/channel/${channel.id}`}>
-          <Avatar />
+          <Avatar size="40px" />
         </Link>
       </div>
       <div className="comment-body">
