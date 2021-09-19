@@ -7,6 +7,7 @@ const WatchVideoWrapper = styled.div`
   .video-column {
     display: flex;
     flex-direction: column;
+    gap: 0.8rem;
     flex-grow: 1;
     max-width: 1280px;
   }

@@ -16,10 +16,13 @@ function VideoDescription({ video }) {
           </Link>
         </div>
         <div className="description-column">
-          <Link to={`${routes.channel}/${channel.id}`}>
-            <span className="channel-name">{channel.name}</span>
-          </Link>
+          <div>
+            <Link to={`${routes.channel}/${channel.id}`}>
+              <span className="channel-name">{channel.name}</span>
+            </Link>
+          </div>
           <span className="channel-subscribers">10K subscribers</span>
+
           <p className="description-text">{description}</p>
         </div>
       </div>
