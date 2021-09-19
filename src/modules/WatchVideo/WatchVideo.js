@@ -1,21 +1,10 @@
-import { mockComments, mockVideos } from '../../utils';
+import { mockVideos } from '../../utils';
 import VideoPlayer from '../common/components/VideoPlayer';
-import Comment from './components/Comment';
+import VideoComments from './components/VideoComments';
 import VideoDescription from './components/VideoDescription';
 import VideoInfo from './components/VideoInfo';
 import WatchVideoThumbnail from './components/WatchVideoThumbnail';
-import { VideoCommentsWrapper, Wrapper } from './WatchVideo.styles';
-
-function VideoComments() {
-  const comments = mockComments;
-  return (
-    <VideoCommentsWrapper>
-      {mockComments.map((comment) => (
-        <Comment comment={comment} />
-      ))}
-    </VideoCommentsWrapper>
-  );
-}
+import { WatchVideoWrapper } from './WatchVideo.styles';
 
 function WatchVideo() {
   const suggestedVideos = mockVideos;
@@ -41,7 +30,7 @@ function WatchVideo() {
     ],
   };
   return (
-    <Wrapper>
+    <WatchVideoWrapper>
       <div className="video-column">
         <VideoPlayer options={videoJsOptions} />
         <VideoInfo video={currentVideo} />
@@ -55,7 +44,7 @@ function WatchVideo() {
           <WatchVideoThumbnail video={video} key={idx} />
         ))}
       </div>
-    </Wrapper>
+    </WatchVideoWrapper>
   );
 }
 

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const Wrapper = styled.div`
+const WatchVideoWrapper = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.paddings.section};
 
@@ -20,10 +20,4 @@ const Wrapper = styled.div`
   }
 `;
 
-const VideoCommentsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-`;
-
-export { Wrapper, VideoCommentsWrapper };
+export { WatchVideoWrapper };
