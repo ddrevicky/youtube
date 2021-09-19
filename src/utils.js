@@ -214,7 +214,7 @@ export const mockComments = [
     channel: { name: 'Stanley Kubrick', id: 1234 },
   },
   {
-    text: "I'd like you to have a good day today.",
+    text: 'Mauris elementum mauris vitae tortor. Etiam bibendum elit eget erat. Integer malesuada. Etiam quis quam. Nulla pulvinar eleifend sem. Sed convallis magna eu sem.',
     datetime: dayjs(),
     likes: 3,
     dislikes: 0,

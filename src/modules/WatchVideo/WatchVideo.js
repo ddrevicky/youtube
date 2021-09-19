@@ -33,6 +33,7 @@ function WatchVideo() {
     <WatchVideoWrapper>
       <div className="video-column">
         <VideoPlayer options={videoJsOptions} />
+        {/* TODO: Rename to WatchVideoInfo to avoid conflict with common comp VideoInfo  */}
         <VideoInfo video={currentVideo} />
         <div className="divider" />
         <VideoDescription video={currentVideo} />

@@ -28,7 +28,7 @@ const VideoInfoWrapper = styled.div`
   }
 `;
 
-const VideoInfoMenuItemWrapper = styled.div`
+const VideoInfoActionWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -41,4 +41,4 @@ const VideoInfoMenuItemWrapper = styled.div`
   }
 `;
 
-export { VideoInfoWrapper, VideoInfoMenuItemWrapper };
+export { VideoInfoWrapper, VideoInfoActionWrapper };

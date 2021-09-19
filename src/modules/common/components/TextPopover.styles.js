@@ -17,7 +17,8 @@ const PopoverText = styled.div`
 
 const PopoverWrapper = styled.div`
   position: relative;
-  width: 100%;
+  /* width: 100%; // TODO: Why was this applied? */
+  width: auto;
 
   &:hover ${PopoverText} {
     visibility: visible;
