@@ -24,6 +24,12 @@ const globalStyles = (theme) =>
       margin-right: 0.3rem;
     }
 
+    .dot-after::after {
+      content: '•';
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+    }
+
     .title-primary {
       color: ${theme.colors.primary};
       font-weight: 500;

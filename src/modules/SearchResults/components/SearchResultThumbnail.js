@@ -14,22 +14,24 @@ function SearchResultThumbnail({ video }) {
         <div style={{ display: 'flex', minWidth: '240px', maxWidth: '360px', width: '100%' }}>
           <VideoPreview video={video} />
         </div>
-        <div className="videoInfo">
+        <div className="search-flex-col">
           <TextPopover text={title}>
             <h3>{title}</h3>
           </TextPopover>
-          <VideoMeta views={views} uploadDatetime={uploadDatetimeText} />
-          <Link to={`/channel/${channel.id}`}>
-            <div className="channel">
-              <Avatar size="24px" />
-              <TextPopover text={channel.name} top="-3rem">
-                <span className="channelName">{channel.name}</span>
-              </TextPopover>
-            </div>
-          </Link>
-          <TextPopover text="From the video description">
-            <p className="description">{video.description}</p>
-          </TextPopover>
+          <div className="info search-flex-col">
+            <VideoMeta views={views} uploadDatetime={uploadDatetime} />
+            <Link to={`/channel/${channel.id}`}>
+              <div className="channel">
+                <Avatar size="24px" />
+                <TextPopover text={channel.name} top="-3rem">
+                  <span className="channelName">{channel.name}</span>
+                </TextPopover>
+              </div>
+            </Link>
+            <TextPopover text="From the video description">
+              <p className="description">{video.description}</p>
+            </TextPopover>
+          </div>
         </div>
       </SearchResultContainer>
     </Link>

@@ -7,10 +7,14 @@ const SearchResultContainer = styled.div`
   gap: ${({ theme }) => theme.paddings.section};
   font-size: 0.75rem;
 
-  .videoInfo {
+  .search-flex-col {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+  }
+
+  .info {
+    color: ${({ theme }) => theme.colors.secondary};
   }
 
   h3 {
@@ -18,7 +22,6 @@ const SearchResultContainer = styled.div`
   }
 
   .channel {
-    color: ${({ theme }) => theme.colors.secondary};
     display: flex;
     width: auto;
     align-items: center;
@@ -36,7 +39,6 @@ const SearchResultContainer = styled.div`
 
   /* TODO: utility class for line clamping */
   .description {
-    color: ${({ theme }) => theme.colors.secondary};
     -webkit-line-clamp: 1;
     display: -webkit-box;
     -webkit-box-orient: vertical;
